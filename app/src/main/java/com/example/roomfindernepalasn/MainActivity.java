@@ -30,9 +30,9 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawer;
-    FirebaseUser user;
-    DatabaseReference databaseReference;
-    List<String> itemlist;
+    FirebaseAuth fAuth;
+    FirebaseDatabase firebaseDatabase;
+    String userId;
 
 
     String uid;
@@ -41,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        fAuth=FirebaseAuth.getInstance();
+        firebaseDatabase =FirebaseDatabase.getInstance();
+
+        userId=fAuth.getCurrentUser().getUid();
+
+        FirebaseDatabase.getInstance().getReference("Customer");
+
 
 
         Toolbar toolbar=findViewById(R.id.toolbar);

@@ -55,7 +55,7 @@ public class Rent_Fragment extends Fragment {
 
         roomList=new ArrayList<>();
         roomList.add(new RentRoomData("Room 1","Kathmandu","Rs. 12000",R.drawable.room2));
-        roomList.add(new RentRoomData("Room 2","Lalitpur","10000",R.drawable.room3));
+        roomList.add(new RentRoomData("Room 2","Lalitpur"," Rs. 10000",R.drawable.room3));
 
         return roomList;
     }
